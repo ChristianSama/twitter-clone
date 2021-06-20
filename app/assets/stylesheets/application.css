@@ -13,4 +13,42 @@
  *= require_tree .
  *= require_self
  */
-@import "bulma";
+
+body {
+}
+
+nav {
+  background-color: grey;
+}
+
+main {
+  background-color: darkgoldenrod;
+  width: 35%;
+}
+
+.content {
+  background-color: darkcyan;
+}
+
+.title {
+  border-bottom: solid;
+  background-color: cornflowerblue;
+}
+
+.recommendations {
+  background-color: darkseagreen;
+}
+
+/*
+.nav-item {
+  background-color: aqua;
+}
+
+.nav-item i {
+  font-size: 40px;
+}
+
+.nav-item span {
+  font-size: 20px;
+}
+*/

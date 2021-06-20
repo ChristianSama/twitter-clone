@@ -5,22 +5,68 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %> 
   </head>
 
   <body>
     <% if flash[:notice] %>
-      <div class="notification is-primary global-notification">
+      <div class="alert alert-info">
         <p class="notice"><%= notice %></p> 
       </div>
     <% end %>
     <% if flash[:alert] %>
-      <div class="notification is-danger global-notification">
+      <div class="alert alert-warning">
         <p class="alert"><%= alert %></p> 
       </div>
     <% end %>
+
+    <div class="d-flex justify-content-center">
+<!-- SIDEBAR --->
+      <nav class="d-flex flex-row-reverse w-25">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <%= link_to root_path, class: "nav-link" do %> 
+              <i class="fab fa-twitter"></i>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to root_path, class: "nav-link" do %>
+              <i class="fab fa-twitter"></i>
+              <span>Home</span>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to root_path, class: "nav-link" do %>
+              <i class="fab fa-twitter"></i>
+              <span>Explore</span>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to root_path, class: "nav-link" do %>
+              <i class="fab fa-twitter"></i>
+              <span>Notifications</span>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to root_path, class: "nav-link" do %>
+              <i class="fab fa-twitter"></i>
+              <span>Messages</span>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to root_path, class: "nav-link" do %>
+              <i class="fab fa-twitter"></i>
+              <span>Bookmarks</span>
+            <% end %>
+          </li>
+        </ul>
+      </nav>
+    
     <%= yield %>
+
+    </div>
   </body>
 </html>
