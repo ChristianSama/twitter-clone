@@ -2,8 +2,27 @@
   <div class="title">
     <h1>Home</h1>
   </div> 
-  <p id="notice"><%= notice %></p>
+  <!-- <p id="notice"><%= notice %></p> --->
+  <form action="#" class="new-tweet">
+  <%= form_with model: @tweet do |form| %>
 
+  <% end %>
+    <div class="new-tweet d-flex">
+      <%= image_tag "user-icon.png", size: "75x75"%>
+      <textarea name="tweet_content" placeholder="What's happening?" class="tweet-content"></textarea>
+    </div>
+    <div class="tweet-option-bar d-flex justify-content-between">
+      <div class="icon-bar">
+        <i class="">icon</i>
+        <i class="">icon</i>
+        <i class="">icon</i>
+        <i class="">icon</i>
+        <i class="">icon</i>
+      </div>
+      <button>Tweet</button> 
+    </div>
+  </form>
+<!--
   <table>
     <thead>
       <tr>
@@ -26,6 +45,7 @@
   <br>
 
   <%= link_to 'New Tweet', new_tweet_path %>
+--->
 </main>
 <div class="recommendations w-25">
   hola
