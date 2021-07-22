@@ -2,23 +2,13 @@
   <div class="title d-flex align-items-center justify-content-between">
     <h1>Home</h1>
     <i class="far fa-star"></i>
-  </div> 
+  </div>
   <%= render 'form' %>
-  <div class="feed">
-    <div class="tweet d-flex">
-        <%= image_tag "user-icon.png", size: "75x75", class: "poster-avatar" %>
-      <div class="tweet-content">
-        <!-- TODO: replace with link_to -->
-        <a href="#">Apply 
-          <i class="fas fa-certificate"></i>
-          <span class="tweet-username">@Apply</span>
-        </a>
-        <span class="tweet-time"> - 7h</span>
-        <p class="tweet-body">Tweet body asdfasdfasdf</p>
-      </div>
-    </div>   
-  </div> 
+  <%= render 'feed' %>
 </main>
-<div class="recommendations w-25">
-  hola
+<div class="d-flex flex-column">
+  <div class="search-bar">
+    <input type="text" placeholder="Search on Twitter">
+  </div>
+  <%= render 'trending' %>
 </div>
