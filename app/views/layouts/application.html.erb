@@ -25,8 +25,8 @@
 
     <div class="d-flex justify-content-center">
 <!-- SIDEBAR --->
-      <nav class="d-flex flex-row-reverse w-25">
-        <ul class="nav flex-column">
+      <nav class="d-flex flex-column">
+        <ul> 
           <li class="nav-item">
             <%= link_to root_path, class: "nav-link" do %> 
               <i class="fab fa-twitter"></i>
@@ -64,9 +64,7 @@
           </li>
         </ul>
       </nav>
-    
     <%= yield %>
-
     </div>
   </body>
 </html>

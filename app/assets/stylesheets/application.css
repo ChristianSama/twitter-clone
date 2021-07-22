@@ -14,41 +14,68 @@
  *= require_self
  */
 
-body {
-}
-
-nav {
-  background-color: grey;
+nav ul {
+  list-style-type: none;
 }
 
 main {
-  background-color: darkgoldenrod;
   width: 35%;
-}
-
-.content {
-  background-color: darkcyan;
+  margin: 0 20px 0 20px;
+  border-left: solid 1px #ebebeb;
+  border-right: solid 1px #ebebeb;
 }
 
 .title {
-  border-bottom: solid;
-  background-color: cornflowerblue;
+  margin-left: 10px;
 }
 
-.recommendations {
-  background-color: darkseagreen;
+.new-tweet {
+  margin-bottom: 20px;
+  border-top: solid 1px #ebebeb;
+  border-bottom: solid 1px #ebebeb;
 }
 
-/*
-.nav-item {
-  background-color: aqua;
+.new-tweet-content {
+  margin-top: 25px;
 }
 
-.nav-item i {
-  font-size: 40px;
+.new-tweet textarea {
+  border: none;
+  overflow: auto;
+  outline: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  resize: none;
+  width: 100%;
 }
 
-.nav-item span {
-  font-size: 20px;
+.icon-bar {
+  width: 35%;
 }
-*/
+
+.new-tweet-option-bar {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.new-tweet-option-bar input {
+  background: none;
+	background-color: rgb(26, 146, 219);
+  color: white;
+	border: none;
+	padding: 7px 20px; 
+  border-radius: 20px;
+  margin-right: 20px;
+}
+
+.tweet {
+  border-top: solid 1px #ebebeb;
+  border-bottom: solid 1px #ebebeb;
+}
+
+.tweet-content {
+  margin-top: 8px;
+}
