@@ -37,9 +37,10 @@ main {
 
 .new-tweet-content {
   margin-top: 25px;
+  width: 100%
 }
 
-.new-tweet textarea {
+.new-tweet-content textarea {
   border: none;
   overflow: auto;
   outline: none;
@@ -53,7 +54,7 @@ main {
 }
 
 .icon-bar {
-  width: 35%;
+  width: 30%;
 }
 
 .new-tweet-option-bar {
@@ -61,7 +62,7 @@ main {
   margin-bottom: 25px;
 }
 
-.new-tweet-option-bar input {
+.actions input {
   background: none;
 	background-color: rgb(26, 146, 219);
   color: white;

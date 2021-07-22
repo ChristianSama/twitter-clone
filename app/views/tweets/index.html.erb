@@ -3,23 +3,7 @@
     <h1>Home</h1>
     <i class="far fa-star"></i>
   </div> 
-    <div class="new-tweet d-flex">
-      <%= image_tag "user-icon.png", size: "75x75"%>
-      <div class="new-tweet-content flex-fill">
-        <%= form_with model: @tweet do |form| %>
-          <%= form.text_area :body, placeholder: "What's happening?" %>
-          <div class="new-tweet-option-bar d-flex justify-content-between">
-            <div class="icon-bar d-flex justify-content-between align-items-center">
-              <i class="far fa-image"></i>
-              <i class="fas fa-chart-bar"></i>
-              <i class="far fa-smile"></i>
-              <i class="far fa-calendar-alt"></i>
-            </div>
-            <%= form.submit "Tweet" %>
-          </div>
-        <% end %>
-      </div>
-    </div>
+  <%= render 'form' %>
   <div class="feed">
     <div class="tweet d-flex">
         <%= image_tag "user-icon.png", size: "75x75", class: "poster-avatar" %>
