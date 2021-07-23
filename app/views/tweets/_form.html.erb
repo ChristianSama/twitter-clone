@@ -1,31 +1,36 @@
-<%= form_with(model: @tweet) do |form| %> <% if @tweet.errors.any? %>
-<div id="error_explanation">
-  <h2>
-    <%= pluralize(@tweet.errors.count, "error") %> prohibited this tweet from
-    being saved:
-  </h2>
+<%= form_with(model: @tweet) do |form| %>
+  <div class="title d-flex align-items-center justify-content-between">
+    <h1>Home</h1>
+    <i class="far fa-star"></i>
+  </div>
+  <% if @tweet.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@tweet.errors.count, "error") %> prohibited this tweet from
+      being saved:
+    </h2>
 
-  <ul>
-    <% @tweet.errors.each do |error| %>
-    <li><%= error.full_message %></li>
-    <% end %>
-  </ul>
-</div>
-<% end %>
+    <ul>
+      <% @tweet.errors.each do |error| %>
+      <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
 
-<div class="new-tweet d-flex">
-  <%= image_tag "user-icon.png", size: "75x75"%>
-  <div class="new-tweet-content">
-    <%= form.text_area :body, placeholder: "What's happening?" %>
-    <div class="new-tweet-option-bar d-flex justify-content-between">
-      <div class="icon-bar d-flex justify-content-between align-items-center">
-        <i class="far fa-image"></i>
-        <i class="fas fa-chart-bar"></i>
-        <i class="far fa-smile"></i>
-        <i class="far fa-calendar-alt"></i>
+  <div class="new-tweet d-flex">
+    <%= image_tag "user-icon.png", size: "75x75"%>
+    <div class="new-tweet-content">
+      <%= form.text_area :body, placeholder: "What's happening?" %>
+      <div class="new-tweet-option-bar d-flex justify-content-between">
+        <div class="icon-bar d-flex justify-content-between align-items-center">
+          <i class="far fa-image"></i>
+          <i class="fas fa-chart-bar"></i>
+          <i class="far fa-smile"></i>
+          <i class="far fa-calendar-alt"></i>
+        </div>
+        <div class="actions"><%= form.submit "Tweet" %></div>
       </div>
-      <div class="actions"><%= form.submit "Tweet" %></div>
     </div>
   </div>
-</div>
 <% end %>
