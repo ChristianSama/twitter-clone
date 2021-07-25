@@ -3,12 +3,11 @@
     <div class="tweet d-flex">
       <%= image_tag "user-icon.png", size: "75x75", class: "poster-avatar" %>
       <div class="tweet-content">
-        <!-- TODO: replace with link_to -->
-        <a href="#"
-          >Apply
+        <%= link_to(root_path) do %>
+          <%= tweet.user.name %>
           <i class="fas fa-certificate"></i>
-          <span class="tweet-username">@Apply</span>
-        </a>
+          <%= tweet.user.username %>
+        <% end %> 
         <span class="tweet-time"> - 7h</span>
         <p class="tweet-body">
           <%= tweet.body %>
