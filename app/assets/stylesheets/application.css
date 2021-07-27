@@ -71,6 +71,11 @@ section {
   padding: 60px 20px;
 }
 
+.trending h2 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
 .trend p {
   margin: 0px;
 }
