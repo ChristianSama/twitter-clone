@@ -64,7 +64,7 @@
             <% end %>
           </li>
         </ul>
-        <div class="logged-user d-flex flex-column align-items-end align-self-end">
+        <div class="account-panel d-flex flex-column">
           <% if user_signed_in? %>
             <%= link_to "Account Settings", edit_user_registration_path %>
             <%= link_to "Sign out", destroy_user_session_path, method: :delete %>

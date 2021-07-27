@@ -23,23 +23,34 @@ ul {
   list-style-type: none;
 }
 
-section {
-  margin-left: 30vw;
+nav li {
+  padding: 10px;
 }
 
-.top-bar {
-  background-color: white;
+.account-panel {
+  padding-bottom: 50px;
+}
+
+section {
+  margin-left: 30vw;
 }
 
 .title {
   height: 50px;
   width: 600px;
   padding: 15px;
-  margin-left: 20px;
-  margin-right: 20px;
+  border-bottom: solid 1px #ebebeb;
+  border-right: solid 1px #ebebeb;
+  background-color: white;
+}
+
+.title h1{
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .search-bar {
+  background-color: white;
   height: 50px;
   padding-top: 5px;
 }
@@ -49,21 +60,31 @@ section {
   height: 40px;
   border-radius: 20px;
   padding-left: 15px;
+  width: 300px;
 }
 .search-bar input:focus {
   border: 1px solid rgb(0, 153, 255)
 }
 
+.trending {
+  width: 300px;
+  padding: 60px 20px;
+}
+
+.trend p {
+  margin: 0px;
+}
+
 main { 
-  padding-top: 50px;
   margin-left: 20px;
   margin-right: 20px;
-  width: 600px;
+  min-width: 600px;
   border-left: solid 1px #ebebeb;
   border-right: solid 1px #ebebeb;
 }
 
 .new-tweet {
+  padding-top: 50px;
   margin-bottom: 20px;
   border-top: solid 1px #ebebeb;
   border-bottom: solid 1px #ebebeb;
@@ -96,9 +117,19 @@ main {
   margin-bottom: 25px;
 }
 
+.tweet {
+  border-top: solid 1px #ebebeb;
+  border-bottom: solid 1px #ebebeb;
+}
+
+.tweet-content {
+  margin-top: 8px;
+}
+
 input {
   border: none;
 }
+
 input:focus {
   border: none;
 }
@@ -111,13 +142,4 @@ input:focus {
 	padding: 7px 20px; 
   border-radius: 20px;
   margin-right: 20px;
-}
-
-.tweet {
-  border-top: solid 1px #ebebeb;
-  border-bottom: solid 1px #ebebeb;
-}
-
-.tweet-content {
-  margin-top: 8px;
 }
