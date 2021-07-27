@@ -13,57 +13,58 @@
 
   <body>
     <% if flash[:notice] %>
-      <div class="alert alert-info">
-        <p class="notice"><%= notice %></p> 
+      <div class="alert alert-info alert-dismissible fade show" role="alert">
+        <strong><%= notice %></strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
     <% end %>
     <% if flash[:alert] %>
-      <div class="alert alert-warning">
-        <p class="alert"><%= alert %></p> 
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong><%= alert %></strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
     <% end %>
 
-    <div class="d-flex justify-content-center">
 <!-- SIDEBAR --->
-      <nav class="d-flex flex-column justify-content-between align-items-end">
+    <nav class="position-fixed d-flex flex-column align-items-end justify-content-between">
         <ul> 
-          <li class="nav-item">
+          <li>
             <%= link_to root_path, class: "nav-link" do %> 
               <i class="fab fa-twitter"></i>
             <% end %>
           </li>
-          <li class="nav-item">
+          <li>
             <%= link_to root_path, class: "nav-link" do %>
               <i class="fab fa-twitter"></i>
               <span>Home</span>
             <% end %>
           </li>
-          <li class="nav-item">
+          <li>
             <%= link_to root_path, class: "nav-link" do %>
               <i class="fab fa-twitter"></i>
               <span>Explore</span>
             <% end %>
           </li>
-          <li class="nav-item">
+          <li>
             <%= link_to root_path, class: "nav-link" do %>
               <i class="fab fa-twitter"></i>
               <span>Notifications</span>
             <% end %>
           </li>
-          <li class="nav-item">
+          <li>
             <%= link_to root_path, class: "nav-link" do %>
               <i class="fab fa-twitter"></i>
               <span>Messages</span>
             <% end %>
           </li>
-          <li class="nav-item">
+          <li>
             <%= link_to root_path, class: "nav-link" do %>
               <i class="fab fa-twitter"></i>
               <span>Bookmarks</span>
             <% end %>
           </li>
         </ul>
-        <div class="logged_user d-flex flex-column">
+        <div class="logged-user d-flex flex-column align-items-end align-self-end">
           <% if user_signed_in? %>
             <%= link_to "Account Settings", edit_user_registration_path %>
             <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
@@ -72,8 +73,7 @@
             <%= link_to "Sign up", new_user_registration_path %>
           <% end %> 
         </div>
-      </nav>
+    </nav>
     <%= yield %>
-    </div>
   </body>
 </html>
