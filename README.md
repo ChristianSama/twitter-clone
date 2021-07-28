@@ -1,24 +1,10 @@
-# README
+This is part of the Authentication Project in The Odin Project's Ruby on Rails Curriculum: https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby-on-rails/lessons/authentication
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is a basic Twitter clone built with ruby on rails.
+It was built using bootstrap for the front-end and devise for user authentication.
+Check out the demo here: https://desolate-citadel-64911.herokuapp.com/
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+It includes the following features:
+ - User Sign up
+ - User Login
+ - Create Tweets
