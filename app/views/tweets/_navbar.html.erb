@@ -1,0 +1,48 @@
+<nav class="position-fixed d-flex flex-column align-items-end justify-content-between">
+    <ul> 
+      <li>
+        <%= link_to root_path, class: "nav-link" do %> 
+          <i class="fab fa-twitter"></i>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to root_path, class: "nav-link" do %>
+          <i class="fab fa-twitter"></i>
+          <span>Home</span>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to root_path, class: "nav-link" do %>
+          <i class="fab fa-twitter"></i>
+          <span>Explore</span>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to root_path, class: "nav-link" do %>
+          <i class="fab fa-twitter"></i>
+          <span>Notifications</span>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to root_path, class: "nav-link" do %>
+          <i class="fab fa-twitter"></i>
+          <span>Messages</span>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to root_path, class: "nav-link" do %>
+          <i class="fab fa-twitter"></i>
+          <span>Bookmarks</span>
+        <% end %>
+      </li>
+    </ul>
+    <div class="account-panel d-flex flex-column">
+      <% if user_signed_in? %>
+        <%= link_to "Account Settings", edit_user_registration_path %>
+        <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to "Sign in", new_user_session_path %>
+        <%= link_to "Sign up", new_user_registration_path %>
+      <% end %> 
+    </div>
+</nav>
