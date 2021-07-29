@@ -125,10 +125,20 @@ main {
 .tweet {
   border-top: solid 1px #ebebeb;
   border-bottom: solid 1px #ebebeb;
+  padding-right: 10px;
 }
 
 .tweet-content {
   margin-top: 8px;
+}
+
+.tweet-header .ellipsis {
+  border-radius: 50%;
+  text-align: center;
+}
+
+.tweet-header .ellipsis:hover {
+  background-color: #ebebeb;
 }
 
 input {
