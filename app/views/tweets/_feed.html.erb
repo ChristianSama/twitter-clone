@@ -4,7 +4,7 @@
       <%= image_tag "user-icon.png", size: "75x75", class: "poster-avatar" %>
       <div class="tweet-content w-100">
         <div class="tweet-header d-flex flex-fill justify-content-between">
-          <%= link_to(root_path) do %>
+          <%= link_to(profile_path(tweet.user.profile.id)) do %>
             <%= tweet.user.name %>
             <i class="fas fa-certificate"></i>
             <span>@<%= tweet.user.username %></span>
