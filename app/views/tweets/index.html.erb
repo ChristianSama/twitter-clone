@@ -1,17 +1,14 @@
-<%= render 'navbar' %>
-<section class="d-flex">
-  <main>
-    <div class="title d-flex align-items-center justify-content-between position-fixed">
-      <h1>Home</h1>
-      <i class="far fa-star"></i>
-    </div>
-    <%= render 'form' %>
-    <%= render 'feed' %>
-  </main>
-  <div>
-    <div class="search-bar position-fixed">
-      <input type="text" placeholder="Search on Twitter">
-    </div>
-    <%= render 'trending' %>
+<main>
+  <div class="title d-flex align-items-center justify-content-between position-fixed">
+    <h1>Home</h1>
+    <i class="far fa-star"></i>
   </div>
-</section>
+  <%= render 'form' %>
+  <%= render 'feed' %>
+</main>
+<div>
+  <div class="search-bar position-fixed">
+    <input type="text" placeholder="Search on Twitter">
+  </div>
+  <%= render 'trending' %>
+</div>
