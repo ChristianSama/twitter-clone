@@ -42,8 +42,6 @@ section {
   width: 600px;
   padding: 15px;
   border-bottom: solid 1px #ebebeb;
-  border-right: solid 1px #ebebeb;
-  background-color: white;
 }
 
 .title h1{
@@ -90,6 +88,7 @@ main {
   margin-left: 20px;
   margin-right: 20px;
   min-width: 600px;
+  min-height: 55px;
   border-left: solid 1px #ebebeb;
   border-right: solid 1px #ebebeb;
 }

@@ -8,6 +8,36 @@
       </div>
     </div>
   </div>
+  <div class="cont d-flex flex-column">
+    <%= image_tag "banner.jpg", size: "600x200", class: "banner" %>
+    <%= image_tag "user-icon.png", class: "profile-pic" %>
+  </div>
+  <div class="following-bar d-flex justify-content-around align-items-center">
+    <%= link_to(root_path) do %>
+      <i class="fas fa-ellipsis-h"></i>
+    <% end %> 
+    <%= link_to(root_path) do %>
+      <i class="far fa-bell"></i>
+    <% end %> 
+    <%= link_to "Follow", root_path, id: "follow-button" %>
+  </div>
+
+  <div class="general-info px-3 my-3">
+    <h1><%= @profile.user.name %></h1>
+    <p>@<%= @profile.user.username %></p>
+    <p><%= @profile.description %></p>
+    <div class="details d-flex">
+      <% if @profile.location != nil %>
+        <span><i class="fas fa-map-marker-alt"></i><%= @profile.location %></span>
+      <% end %>
+      <% if @profile.link != nil %>
+        <%= link_to nil do %>
+        <i class="fas fa-link"></i><%= @profile.link %>
+        <% end %>
+      <% end %>
+      <span><i class="far fa-calendar-alt"></i> born on: <%= @profile.user.created_at %></span>
+    </div>
+  </div>
 </main>
 <div>
 

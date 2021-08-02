@@ -74,9 +74,11 @@
           <% end %> 
         </div>
       </nav>
-    <% end %> 
     <section class="d-flex">
       <%= yield %>
     </section>
+    <% else %>
+      <%= yield %>
+    <% end %> 
   </body>
 </html>
