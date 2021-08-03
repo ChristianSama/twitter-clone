@@ -3,8 +3,7 @@
   <div class="tweet-content w-100">
     <div class="tweet-header d-flex flex-fill justify-content-between">
       <%= link_to(profile_path(tweet.user.profile.id)) do %>
-        <%= tweet.user.name %>
-        <i class="fas fa-certificate"></i>
+        <strong><%= tweet.user.name %></strong>
         <span>@<%= tweet.user.username %></span>
         <span class="tweet-time"> - 7h</span>
       <% end %> 

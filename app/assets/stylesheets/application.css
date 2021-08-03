@@ -13,9 +13,6 @@
  *= require_tree .
  *= require_self
  */
-
-
-
 nav {
   width: 30vw;
   height: 100vh;
@@ -27,6 +24,21 @@ ul {
 
 nav li {
   padding: 10px;
+}
+
+.nav-link {
+  font-size: 1.3rem;
+  color: black;
+}
+
+.nav-link i {
+  font-size: 1.7rem;
+  margin-right: 1rem;
+}
+
+.brand {
+  color:rgb(0, 153, 255);
+  font-size: 1.5rem;
 }
 
 .account-panel {
@@ -91,73 +103,6 @@ main {
   min-height: 55px;
   border-left: solid 1px #ebebeb;
   border-right: solid 1px #ebebeb;
-}
-
-.new-tweet {
-  padding-top: 50px;
-  margin-bottom: 20px;
-  border-top: solid 1px #ebebeb;
-  border-bottom: solid 1px #ebebeb;
-}
-
-.new-tweet-content {
-  margin-top: 25px;
-  width: 100%
-}
-
-.new-tweet-content textarea {
-  border: none;
-  overflow: auto;
-  outline: none;
-
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-
-  resize: none;
-  width: 100%;
-}
-
-.icon-bar {
-  width: 30%;
-}
-
-.new-tweet-option-bar {
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
-
-.tweet {
-  border-top: solid 1px #ebebeb;
-  border-bottom: solid 1px #ebebeb;
-  padding-right: 10px;
-}
-
-.tweet-content {
-  margin-top: 8px;
-}
-
-.tweet-header .ellipsis {
-  border-radius: 50%;
-  text-align: center;
-}
-
-.tweet-header .ellipsis:hover {
-  background-color: #ebebeb;
-}
-
-input {
-  border: solid 1px #ebebeb;
-}
-
-.actions input {
-  background: none;
-	background-color: rgb(26, 146, 219);
-  color: white;
-	border: none;
-	padding: 7px 20px; 
-  border-radius: 20px;
-  margin-right: 20px;
 }
 
 .login-form {

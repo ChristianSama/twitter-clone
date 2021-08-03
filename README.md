@@ -7,4 +7,6 @@ Check out the demo here: https://desolate-citadel-64911.herokuapp.com/
 It includes the following features:
  - User Sign up
  - User Login
+ - View User Profiles
  - Create Tweets
+ - Delete Tweets
