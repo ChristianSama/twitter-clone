@@ -37,8 +37,18 @@
       <% end %>
       <span><i class="far fa-calendar-alt"></i> born on: <%= @profile.user.created_at %></span>
     </div>
+    <div class="follow-counter d-flex">
+      <span><strong>1.234</strong> Following</span>
+      <span><strong>147,8 k</strong> Followers</span>
+    </div>
+  </div>
+  
+  <div class="profile-tweets">
+    <% @profile.user.tweets.each do |tweet| %>
+      <%= render tweet %>
+    <% end %>
   </div>
 </main>
 <div>
-
+  <%= render 'tweets/trending' %>
 </div>
