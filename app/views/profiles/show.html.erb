@@ -1,7 +1,9 @@
 <main>
-  <div class="title d-flex align-items-center justify-content-between position-fixed">
+  <div class="title d-flex align-items-center justify-content-between">
     <div class="d-flex align-items-center justify-content-between">
-      <i class="fas fa-arrow-left"></i>
+      <%= link_to(root_path) do %>
+        <i class="fas fa-arrow-left"></i>
+      <% end %>
       <div class="xyz d-flex flex-column px-5">
         <h1 class="lh-1"><%= @profile.user.name %></h1>
         <p class="lh-1 mb-0">29000 tweets</p>

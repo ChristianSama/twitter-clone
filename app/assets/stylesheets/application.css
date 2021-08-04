@@ -50,6 +50,7 @@ section {
 }
 
 .title {
+  position: fixed;
   height: 55px;
   width: 600px;
   padding: 15px;

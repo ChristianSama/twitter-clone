@@ -5,7 +5,7 @@
       <%= link_to(profile_path(tweet.user.profile.id)) do %>
         <strong><%= tweet.user.name %></strong>
         <span>@<%= tweet.user.username %></span>
-        <span class="tweet-time"> - 7h</span>
+        <span class="tweet-time"> - <%= time_ago_in_words(tweet.created_at) %></span>
       <% end %> 
       <div class="myDropdown">
         <a href="#" class="ellipsis btn btn-light" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
