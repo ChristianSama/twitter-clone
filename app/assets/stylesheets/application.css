@@ -13,6 +13,29 @@
  *= require_tree .
  *= require_self
  */
+
+.notice, .alert {
+  margin-top: 0.75rem;
+  width: 75%;
+  height: 3rem;
+  position: fixed;
+  z-index: 2;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+  vertical-align: middle;
+  line-height: 3rem;
+  border-radius: 8px;
+  transition: opacity 2s;
+  transition-delay: 2s;
+}
+.notice {
+  background-color: aqua;
+}
+.alert-notice {
+  background-color: darksalmon;
+}
+
 nav {
   width: 30vw;
   height: 100vh;
@@ -50,7 +73,8 @@ section {
 }
 
 .title {
-  position: fixed;
+  z-index: 1;
+  background-color: white;
   height: 55px;
   width: 600px;
   padding: 15px;

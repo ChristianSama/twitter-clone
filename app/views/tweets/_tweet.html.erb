@@ -5,7 +5,7 @@
       <%= link_to(profile_path(tweet.user.profile.id)) do %>
         <strong><%= tweet.user.name %></strong>
         <span>@<%= tweet.user.username %></span>
-        <span class="tweet-time"> - <%= time_ago_in_words(tweet.created_at) %></span>
+        <span class="tweet-time"> - <%= time_ago_in_words(tweet.created_at) %> ago</span>
       <% end %> 
       <div class="myDropdown">
         <a href="#" class="ellipsis btn btn-light" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
@@ -16,7 +16,7 @@
             <li><%= link_to "Delete", tweet_path(tweet.id), :method => :delete, class: "dropdown-item" %></li>
             <li><%= link_to "Edit", root_path, class: "dropdown-item disabled" %></li>
           <% else %>
-            <li><%= link_to "Action1", root_path, class: "dropdown-item" %></li>
+            <li><%= link_to "I'm not interested on this tweet", root_path, class: "dropdown-item disabled" %></li>
           <% end %>
         </ul>
       </div>

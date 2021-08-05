@@ -12,15 +12,13 @@
   </head>
   <body>
     <% if flash[:notice] %>
-      <div class="alert alert-info alert-dismissible fade show" role="alert">
+      <div class="notice">
         <strong><%= notice %></strong>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
     <% end %>
     <% if flash[:alert] %>
-      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <div class="alert-notice">
         <strong><%= alert %></strong>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
     <% end %>
 
@@ -80,5 +78,6 @@
     <% else %>
       <%= yield %>
     <% end %> 
+    <%= javascript_pack_tag "flash" %>
   </body>
 </html>
