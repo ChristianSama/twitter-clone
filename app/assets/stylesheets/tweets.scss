@@ -1,8 +1,8 @@
 .new-tweet {
   padding-top: 50px;
   margin-bottom: 20px;
-  border-top: solid 1px #ebebeb;
-  border-bottom: solid 1px #ebebeb;
+  border-top: solid 1px var(--border-color);
+  border-bottom: solid 1px var(--border-color);
 }
 
 .new-tweet-content {
@@ -66,8 +66,8 @@ input {
 
 .actions input {
   background: none;
-	background-color: rgb(26, 146, 219);
-  color: white;
+	background-color: var(--main-color);
+  color: var(--button-text-color);
 	border: none;
 	padding: 7px 20px; 
   border-radius: 20px;

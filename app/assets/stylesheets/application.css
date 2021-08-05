@@ -13,6 +13,16 @@
  *= require_tree .
  *= require_self
  */
+:root {
+  --main-bg-color: white;
+  --main-color: rgb(29, 161, 242);
+  --notice-color: aqua;
+  --alert-color: darksalmon;
+  --border-color: #ebebeb;
+  --search-bar-bg-color: rgb(232, 248, 255);
+  --link-text-color: black;
+  --button-text-color: white;
+}
 
 .notice, .alert {
   margin-top: 0.75rem;
@@ -30,10 +40,10 @@
   transition-delay: 2s;
 }
 .notice {
-  background-color: aqua;
+  background-color: var(--notice-color);
 }
 .alert-notice {
-  background-color: darksalmon;
+  background-color: var(--alert-color);
 }
 
 nav {
@@ -51,7 +61,7 @@ nav li {
 
 .nav-link {
   font-size: 1.3rem;
-  color: black;
+  color: var(--link-text-color);
 }
 
 .nav-link i {
@@ -60,7 +70,7 @@ nav li {
 }
 
 .brand {
-  color:rgb(0, 153, 255);
+  color: var(--main-color);
   font-size: 1.5rem;
 }
 
@@ -74,11 +84,12 @@ section {
 
 .title {
   z-index: 1;
-  background-color: white;
+  background-color: var(--main-bg-color);
   height: 55px;
   width: 600px;
   padding: 15px;
-  border-bottom: solid 1px #ebebeb;
+  border-bottom: solid 1px var(--border-color);
+  border-right: solid 1px var(--border-color);
 }
 
 .title h1{
@@ -91,20 +102,17 @@ section {
 }
 
 .search-bar {
-  background-color: white;
+  background-color: var(--main-bg-color);
   height: 50px;
   padding-top: 5px;
 }
 
 .search-bar input {
-  background-color: rgb(227, 245, 255);
+  background-color: var(--search-bar-bg-color);
   height: 40px;
   border-radius: 20px;
   padding-left: 15px;
   width: 300px;
-}
-.search-bar input:focus {
-  border: 1px solid rgb(0, 153, 255)
 }
 
 .trending {
@@ -126,8 +134,8 @@ main {
   margin-right: 20px;
   min-width: 600px;
   min-height: 55px;
-  border-left: solid 1px #ebebeb;
-  border-right: solid 1px #ebebeb;
+  border-left: solid 1px var(--border-color);
+  border-right: solid 1px var(--border-color);
 }
 
 .login-form {
