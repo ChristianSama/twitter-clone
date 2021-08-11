@@ -24,7 +24,7 @@
   --button-text-color: white;
 }
 
-.notice, .alert {
+.notice, .alert-notice {
   margin-top: 0.75rem;
   width: 75%;
   height: 3rem;

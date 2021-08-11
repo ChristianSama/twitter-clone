@@ -6,7 +6,7 @@
       <% end %>
       <div class="xyz d-flex flex-column px-5">
         <h1 class="lh-1"><%= @profile.user.name %></h1>
-        <p class="lh-1 mb-0">29000 tweets</p>
+        <p class="lh-1 mb-0"><%= @profile.user.tweets.count %> tweets</p>
       </div>
     </div>
   </div>
