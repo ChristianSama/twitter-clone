@@ -10,3 +10,4 @@ It includes the following features:
  - View User Profiles
  - Create Tweets
  - Delete Tweets
+ - Follow/Unfollow Users
