@@ -15,16 +15,18 @@
     <%= image_tag "user-icon.png", class: "profile-pic" %>
   </div>
   <div class="following-bar d-flex justify-content-around align-items-center">
-    <%= link_to(root_path) do %>
-      <i class="fas fa-ellipsis-h"></i>
-    <% end %> 
-    <%= link_to(root_path) do %>
-      <i class="far fa-bell"></i>
-    <% end %> 
-    <% if current_user.followed_users.include?(@profile.user) %>
-      <%= link_to "Unfollow", unfollow_path(@profile.user.id), id: "follow-button" , method: 'DELETE' %>
-    <% else %>
-      <%= link_to "Follow", follow_path(@profile.user.id), id: "follow-button", method: 'POST' %>
+    <% if !(current_user == @profile.user) %>
+      <%= link_to(root_path) do %>
+        <i class="fas fa-ellipsis-h"></i>
+      <% end %> 
+      <%= link_to(root_path) do %>
+        <i class="far fa-bell"></i>
+      <% end %> 
+        <% if current_user.followed_users.include?(@profile.user) %>
+          <%= link_to "Unfollow", unfollow_path(@profile.user.id), id: "follow-button" , method: 'DELETE' %>
+        <% else %>
+          <%= link_to "Follow", follow_path(@profile.user.id), id: "follow-button", method: 'POST' %>
+        <% end %>
     <% end %>
   </div>
 
@@ -44,8 +46,8 @@
       <span><i class="far fa-calendar-alt"></i> born on: <%= format_date(@profile.user.created_at) %></span>
     </div>
     <div class="follow-counter d-flex my-1">
-      <span><strong>1.234</strong> Following</span>
-      <span class="mx-3"><strong>147,8 k</strong> Followers</span>
+      <span><strong><%= @profile.user.followed_users.count %></strong> Following</span>
+      <span class="mx-3"><strong><%= @profile.user.followers.count %></strong> Followers</span>
     </div>
   </div>
   

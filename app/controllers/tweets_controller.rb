@@ -5,7 +5,9 @@ class TweetsController < ApplicationController
 
   # GET /tweets or /tweets.json
   def index
-    @tweets = Tweet.all
+    @tweets = Tweet.where("user_id = ? OR user_id = ?",
+              current_user.followed_users.pluck(:id),
+              current_user.id).order(created_at: :desc)
     @tweet = Tweet.new
   end
 
